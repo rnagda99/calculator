@@ -24,5 +24,9 @@ class TimezonesServiceProvider extends ServiceProvider
     public function register()
     {
       $this->app->make('Rnagda99\Calculator\CalculatorController');
+
+      $this->app->bind('Rnagda99\Calculator\Track', function ($app) {
+        return new Track();
+      });
     }
 }
