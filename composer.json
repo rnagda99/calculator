@@ -1,0 +1,22 @@
+{
+    "name": "rnagda99/calculator",
+    "description": "Demo-package to show time",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Laravel Daily",
+            "email": "info@laraveldaily.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rnagda99\\Calculator\\TimezonesServiceProvider"
+            ]
+        }
+    }
+}
